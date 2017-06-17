@@ -16,7 +16,7 @@
   - name: Cockpit | Enable (fedora, redhat, centos)
     shell: systemctl enable --now cockpit.socket
     become: yes
-    when: (ansible_distribution == 'RedHat' or ansible_distribution == 'CentOS' or ansible_distribution == 'Fedora')
+    when: (ansible_distribution == 'RedHat' or ansible_distribution == 'CentOS' or ansible_distribution == 'Fedora') and docker_test is not defined
     tags:
       - cockpit
 
