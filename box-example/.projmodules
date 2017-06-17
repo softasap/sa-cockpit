@@ -1,0 +1,6 @@
+[submodule "roles/sa-cockpit"]
+        path = roles/sa-cockpit
+        url = https://github.com/softasap/sa-cockpit.git
+[submodule "roles/sa-nginx"]
+        path = roles/sa-nginx
+        url = https://github.com/softasap/sa-nginx.git

@@ -1,0 +1,22 @@
+---
+
+  - name: Cockpit | add ppa repository (ubuntu)
+    apt_repository: repo='ppa:cockpit-project/cockpit'
+    become: yes
+    when: ansible_os_family == "Debian"
+    tags:
+      - cockpit
+
+  - name: Cockpit | Install Cockpit
+    package: name="cockpit" state="latest"
+    become: yes
+    tags:
+      - cockpit
+
+  - name: Cockpit | Enable (fedora, redhat, centos)
+    shell: systemctl enable --now cockpit.socket
+    become: yes
+    when: (ansible_distribution == 'RedHat' or ansible_distribution == 'CentOS' or ansible_distribution == 'Fedora')
+    tags:
+      - cockpit
+
