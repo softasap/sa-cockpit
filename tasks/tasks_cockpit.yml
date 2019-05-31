@@ -8,7 +8,7 @@
       - cockpit
 
   - name: Cockpit | Install Cockpit
-    package: name="cockpit" state="latest"
+    package: name="cockpit" state="present"
     become: yes
     tags:
       - cockpit
