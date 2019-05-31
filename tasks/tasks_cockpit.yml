@@ -1,14 +1,7 @@
 ---
 
-  - name: Cockpit | add ppa repository (ubuntu)
-    apt_repository: repo='ppa:cockpit-project/cockpit'
-    become: yes
-    when: ansible_os_family == "Debian"
-    tags:
-      - cockpit
-
   - name: Cockpit | Install Cockpit
-    package: name="cockpit" state="latest"
+    package: name="cockpit" state="present"
     become: yes
     tags:
       - cockpit

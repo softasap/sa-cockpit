@@ -23,10 +23,14 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - xenial
+        - bionic
     - name: Fedora
       versions:
         - 25
+        - 26
+        - 27
+        - 28
+        - 29 
     - name: EL
       versions:
         - 7
